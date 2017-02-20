@@ -1,9 +1,22 @@
+#include <stdlib.h>
 #include "SimpleComputer.h"
 
-int SC_MemoryInit();
+#define MEMORY_SIZE 100
+
+int *memory;
+
+int SC_MemoryInit()
+{
+    memory = calloc(MEMORY_SIZE, sizeof(int));
+    return 1;
+}
 
 int SC_MemorySet(int address, int value);
-int SC_MemoryGet(int address, int *value);
+int SC_MemoryGet(int address, int *value)
+{
+    *value = memory[address];
+    return 1;
+}
 
 int SC_MemorySave(char *fileName);
 int SC_MemoryLoad(char *fileName);
