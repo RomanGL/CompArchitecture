@@ -21,7 +21,7 @@ int main() {
     SC_MemoryLoad("memory.txt");
 
     int val;
-    SC_CommandEncode(76, 150, &val);
+    SC_CommandEncode(76, 100, &val);
     printf("val = %d\n", val);
 
     int com, op;

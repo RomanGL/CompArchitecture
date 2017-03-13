@@ -125,7 +125,7 @@ int SC_RegGet(int regist, int *value)
 
 int SC_CommandEncode(int command, int operand, int *value)
 {
-    int16_t tmp = 0;
+    int tmp = 0;
     tmp |= command;
     tmp <<= 7;
     tmp |= operand;
