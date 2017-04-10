@@ -42,4 +42,9 @@ int SC_RegGet(int regist, int *value);
 int SC_CommandEncode(int command, int operand, int *value);
 int SC_CommandDecode(int value, int *command, int *operand);
 
+int SC_AccumSet(int value);
+int SC_AccumGet(int *value);
+int SC_CountSet(int value);
+int SC_CountGet(int *value);
+
 #endif //COMARCITECTURE_SIMPLECOMPUTER_H

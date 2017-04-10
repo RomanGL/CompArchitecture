@@ -18,7 +18,7 @@ int MT_GotoXY(int x, int y);
 int MT_GetScreenSize(int *rows, int *columns);
 
 int MT_SetFgColor(enum Colors color);
-int MT_SetBgColor (enum Colors color);
+int MT_SetBgColor(enum Colors color);
 int MT_ResetColors();
 
 #endif //COMARCITECTURE_MYTERM_H

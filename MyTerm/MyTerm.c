@@ -5,6 +5,14 @@
 
 #include "MyTerm.h"
 
+int MT_WriteIntoTerm(char *data, int size)
+{
+    if (write(STDOUT_FILENO, data, strlen(data)) < size)
+        return -1;
+
+    return 0;
+}
+
 int MT_GetScreenSize(int *rows, int *columns)
 {
     struct winsize ws;
@@ -61,10 +69,3 @@ int MT_ResetColors()
     return MT_WriteIntoTerm(data, size);
 }
 
-int MT_WriteIntoTerm(char *data, int size)
-{
-    if (write(STDOUT_FILENO, data, strlen(data)) < size)
-        return -1;
-
-    return 0;
-}

@@ -145,3 +145,27 @@ int SC_CommandDecode(int value, int *command, int *operand)
     *command = value >> 7;
     return 0;
 }
+
+int SC_AccumSet(int value)
+{
+    reg.accum = value;
+    return 0;
+}
+
+int SC_AccumGet(int *value)
+{
+    *value = reg.accum;
+    return 0;
+}
+
+int SC_CountSet(int value)
+{
+    reg.count = value;
+    return 0;
+}
+
+int SC_CountGet(int *value)
+{
+    *value = reg.count;
+    return 0;
+}
